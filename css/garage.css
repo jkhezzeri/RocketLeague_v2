@@ -1,0 +1,390 @@
+@CHARSET "UTF-8";
+
+
+#garage_content {
+    /* margin-top: 96px; */
+    /* background-color: green; */
+    /* height: 2048px; */
+    /* color: black; */
+}
+
+#garage_top {
+    width: 100%;
+    height: 64px;
+    margin: 4px 0 16px;
+    display: inline-block;
+    /* background-color: red; */
+}
+
+/* #garage_top.decals {
+    margin: 4px 0 0;
+} */
+
+#garage_category {
+    float: left;
+    height: 100%;
+    margin-left: 4px;
+}
+
+#category_image {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    float: left;
+}
+
+body.dark #category_image {
+    filter: invert(100%);
+}
+
+#category_name {
+    display: inline-block;
+    height: 100%;
+    font-size: 64px;
+    vertical-align: top;
+    line-height: 64px;
+    text-transform: uppercase;
+    float: left;
+    padding-left: 8px;
+}
+
+#garage_sort {
+    float: right;
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+#sort_label {
+    height: 28px;
+    line-height: 28px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#sort_menu {
+    font-family: arial;
+}
+
+#sort_result {
+    width: 128px;
+    height: 36px;
+    border-style: solid;
+	border-width: 2px;
+	border-color: #007fff;
+    text-align: center;
+    line-height: 32px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+body.orange #sort_result {
+    border-color: #ff7f00;
+}
+
+#sort_input {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+#sort_list {
+	text-align: center;
+	display: none;
+	position: absolute;
+	z-index: 50;
+	width: 128px;
+	cursor: pointer;
+    background-color: #eff7ff;
+    margin: auto;
+	padding: 0px;
+	list-style-type: none;
+    border-style: solid;
+	border-width: 0 2px 2px;
+	border-color: #007fff;
+    box-sizing: border-box;
+}
+
+body.orange #sort_list, body.orange .decals_body {
+    background-color: #fff7ef;
+    border-color: #ff7f00;
+}
+
+body.dark #sort_list, body.dark .decals_body {
+    background-color: #001f3f;
+}
+
+body.orange.dark #sort_list, body.orange.dark .decals_body {
+    background-color: #3f1f00;
+}
+
+.sort {
+    width: 100%;
+	height: 32px;
+	display: inline-block;
+	line-height: 32px;
+}
+
+.sort.selected {
+    background-color: #7fbfff;
+}
+
+body.orange .sort.selected {
+    background-color: #ffbf7f;
+}
+
+body.dark .sort.selected {
+    background-color: #003f7f;
+}
+
+body.orange.dark .sort.selected {
+    background-color: #7f3f00;
+}
+
+.decals_body {
+	font-size: 32px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 4px;
+    margin: 20px 0;
+	text-transform: uppercase;
+    /* background-color: green; */
+    position: sticky;
+    top: 96px;
+    z-index: 10;
+    background-color: #eff7ff;
+}
+
+#garage_list {
+    width: 100%;
+    font-size: 16px;
+    /* background-color: purple; */
+}
+
+.garage_item {
+    width: 240px;
+    height: 280px;
+    text-align: center;
+    background-color: black;
+    position: relative;
+    display: inline-block;
+    margin: 4px;
+  	vertical-align: top;
+    cursor: pointer;
+    font-family: arial;
+}
+
+/* .garage_item:hover {
+    border-style: solid;
+	border-width: 2px;
+    box-sizing: border-box;
+}
+
+.garage_item:hover .item_image {
+    margin: 8px 8px 10px;
+} */
+
+.item_image {
+    width: 220px;
+    height: 220px;
+    margin: 10px;
+}
+
+.item_image img {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    mix-blend-mode: screen;
+}
+
+.garage_item.black_market .item_image img {
+    animation: 1s ease-in-out infinite alternate blackmarket;
+}
+
+@keyframes blackmarket {
+    from { margin-top: -5px; }
+    to { margin-top: 5px; }
+}
+
+.item_name {
+    color: white;
+    /* background-color: pink; */
+    height: 30px;
+    line-height: 18px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.garage_item:hover .item_name {
+    color: inherit;
+}
+
+
+
+.garage_item.common {
+	background-color: #000000;
+	color: #4d4d4d;
+	border-color: #b2b2b2;
+}
+.garage_item.legacy {
+	background-image: linear-gradient(#000000, #4d4d4d);
+	color: #b2b2b2;
+	border-color: #b2b2b2;
+}
+.garage_item.premium {
+	background-image: linear-gradient(#000000, #2b6046);
+	color: #6bf1ae;
+	border-color: #6bf1ae;
+}
+.garage_item.limited {
+	background-image: linear-gradient(#000000, #633017);
+	color: #f77939;
+	border-color: #f77939;
+}
+.garage_item.uncommon {
+	background-image: linear-gradient(#000000, #325765);
+	color: #7dd9fd;
+	border-color: #7dd9fd;
+}
+.garage_item.rare {
+	background-image: linear-gradient(#000000, #2e3c5e);
+	color: #7497eb;
+	border-color: #7497eb;
+}
+.garage_item.very_rare {
+	background-image: linear-gradient(#000000, #3f3265);
+	color: #9e7cfc;
+	border-color: #9e7cfc;
+}
+.garage_item.import {
+	background-image: linear-gradient(#000000, #5b2421);
+	color: #e35a52;
+	border-color: #e35a52;
+}
+.garage_item.exotic {
+	background-image: linear-gradient(#000000, #5e582b);
+	color: #ecdb6c;
+	border-color: #ecdb6c;
+}
+.garage_item.black_market {
+	background-image: linear-gradient(#000000, #660066);
+	color: #ff00ff;
+	border-color: #ff00ff;
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 800px) {
+    #garage_top {
+        height: 32px;
+        margin: 0 0 10px;
+    }
+    #garage_category {
+        margin-left: 0;
+    }
+    #category_image {
+        width: 32px;
+        height: 32px;
+    }
+    #category_name {
+        font-size: 32px;
+        line-height: 32px;
+        padding-left: 0;
+    }
+    #garage_sort {
+        font-size: 16px;
+        margin-right: 0;
+    }
+    #sort_label {
+        display: none;
+    }
+    #sort_result {
+        width: 76px;
+        height: 32px;
+        line-height: 28px;
+    }
+    #sort_input input {
+        display: none;
+    }
+    #sort_list {
+    	width: 76px;
+    }
+    .sort {
+        width: 100%;
+    	height: 28px;
+    	line-height: 28px;
+    }
+    .decals_body {
+        width: 100%;
+        grid-column: 1 / -1;
+        font-size: 24px;
+        height: 24px;
+        line-height: 24px;
+        padding-left: 0;
+        margin: 2px 0;
+        top: 48px;
+    }
+    #garage_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        row-gap: 10px;
+        column-gap: 10px;
+        font-size: 12px;
+    }
+    .garage_item {
+        width: 100px;
+        height: 100px;
+        margin: 0;
+    }
+    .item_image {
+        width: 96px;
+        height: 96px;
+        margin: 2px;
+    }
+    .garage_item.black_market .item_image img {
+        animation: 1s ease-in-out infinite alternate mobileblackmarket;
+    }
+    @keyframes mobileblackmarket {
+        from { margin-top: -2px; }
+        to { margin-top: 2px; }
+    }
+    .item_name {
+        /* background-color: red; */
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 40px;
+        line-height: 13px;
+        position: absolute;
+        bottom: 0;
+        color: inherit;
+    }
+    .garage_item.common {
+        color: white;
+    }
+}
+
+@media all and (max-width: 690px) {
+    #garage_list {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 580px) {
+    #garage_list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 470px) {
+    #garage_list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

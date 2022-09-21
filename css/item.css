@@ -1,0 +1,94 @@
+@CHARSET "UTF-8";
+
+
+#item_content {
+    /* margin-top: 96px; */
+    /* background-color: green; */
+}
+
+#item_general {
+    width: 100%;
+    /* margin: 4px 0 0; */
+    display: inline-block;
+    background-color: red;
+}
+
+#item_image {
+    width: 256px;
+    height: 256px;
+    background-color: black;
+    float: left;
+}
+
+#item_infos {
+    margin-left: 20px;
+    float: left;
+    background-color: blue;
+    height: 256px;
+    box-sizing: border-box;
+    border-style: solid;
+	border-width: 2px;
+}
+
+#item_name {
+    font-size: 64px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#item_infos.common {
+	background-color: #000000;
+	color: #4d4d4d;
+	border-color: #b2b2b2;
+}
+#item_infos.uncommon {
+	background-image: linear-gradient(#000000, #325765);
+	color: #7dd9fd;
+	border-color: #7dd9fd;
+}
+#item_infos.premium {
+	background-image: linear-gradient(#000000, #2b6046);
+	color: #6bf1ae;
+	border-color: #6bf1ae;
+}
+#item_infos.limited {
+	background-image: linear-gradient(#000000, #633017);
+	color: #f77939;
+	border-color: #f77939;
+}
+#item_infos.rare {
+	background-image: linear-gradient(#000000, #2e3c5e);
+	color: #7497eb;
+	border-color: #7497eb;
+}
+#item_infos.very_rare {
+	background-image: linear-gradient(#000000, #3f3265);
+	color: #9e7cfc;
+	border-color: #9e7cfc;
+}
+#item_infos.import {
+	background-image: linear-gradient(#000000, #5b2421);
+	color: #e35a52;
+	border-color: #e35a52;
+}
+#item_infos.exotic {
+	background-image: linear-gradient(#000000, #5e582b);
+	color: #ecdb6c;
+	border-color: #ecdb6c;
+}
+#item_infos.black_market {
+	background-image: linear-gradient(#000000, #660066);
+	color: #ff00ff;
+	border-color: #ff00ff;
+}
